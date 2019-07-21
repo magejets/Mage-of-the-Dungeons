@@ -214,8 +214,8 @@ function touchDoor(){
     for(var i = 0; i<platforms.length;i++){
         var p = platforms[i];
         if((p.level == level || p.level == 0)&& (p.status == 1 || p.status == undefined)){
-            if(collisionDetection(player,p)==true){
-                if(p.type == 6){
+            if(collisionDetection(player,p)==true && p.type == 6){
+                if(p.open == true){
                     teleport(10,310);
                     level++;
                 }
