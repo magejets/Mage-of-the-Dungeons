@@ -1,9 +1,7 @@
 <!DOCTYPE html>
-<html>
-<!-- COPYRIGHT 2019 MAGE J LEWIS-->    
-<head>
+<html><!-- COPYRIGHT 2019 MAGE J LEWIS--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-92180813-3"></script>
+    <script type="text/javascript" async="" src="./Mage_files/analytics.js.download"></script><script async="" src="./Mage_files/js"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -11,34 +9,140 @@
 
         gtag('config', 'UA-92180813-3');
     </script>
-    <link rel="shortcut icon" type="image/jpg" href="mage_favicon.png">
+    <link rel="shortcut icon" type="image/jpg" href="https://magejets.github.io/Mage-of-the-Dungeons/mage_favicon.png">
     <title>Mage</title>
     <style>
-        h1{
-            align-content: center
+        canvas{
+            background: rgb(0,0,0);
         }
-        h2{align-content: center}
-        canvas{align-content: center}
-        p{color:white}
-        #left{float:left}
-        #right{float:right}
-        a{color:white}
+    body{
+        font-family: Optima, Courier, Ariel;
+        background-color:#000000;
+        background-image: url('background.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        color:#00cc00;
+    }
+    .navbar {
+        overflow: hidden;
+        background-color: #000000;
+        max-height: 68px;
+        position:fixed;
+        top:0;
+        left:0;
+        right:0;
+    }
+
+    .navbar a {
+        float: left;
+        font-size: 25px;
+        color: #00cc00;
+        text-align: center;
+        padding: 20px 40px;
+        text-decoration: none;
+    }
+
+    .dropdown {
+        float: left;
+        overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+        font-size: 25px;  
+        border: none;
+        outline: none;
+        color: #00cc00;
+        padding: 20px 40px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
+
+    .navbar a:hover, .dropdown:hover .dropbtn {
+        background-color: #00cc00;
+        color: #000000;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #00cc00;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(120,150,120,0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        float: none;
+        color: #000000;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #000000;
+        color: #00cc00
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+        position:fixed;
+    }
+    div.centered{
+        background-color:#111111;
+        color:#00cc00;
+        margin-right:10%;
+        margin-left:10%
+    }
+    footer{
+        background-color:#000000;
+        color:#00cc00;
+    }
+    a{
+        color:#00cc00;
+    }
     </style>
 </head>
     
-<body style = "background:#550055">
-    <div id = "left">
-        <h1 style = "color: white">Mage of the Dungeons</h1>
-        <h2 style = "color: white">By Mason Lewis</h2>
-        <canvas id = "canvas" style = "background:#a9a9a9" width = "480" height = "360">Your Browser Does Not Support The Canvas Element</canvas>
-        <p>Use the arrow keys to move, and the space key to shoot spells.</p>
+<body>
+<div class="navbar">
+    <a href="https://magejets.github.io/Games"><img src="logo.png" width = "48" height = "32"></a>
+    <a href="https://magejets.github.io/Games">Home</a>
+    <div class="dropdown">
+        <button class="dropbtn">Games &#9660</button>
+        <div class="dropdown-content">
+            <a href = "http://magejets.github.io/Potato-Invaders">Potato Invaders</a>
+            <a href = "https://magejets.github.io/Mage-of-the-Dungeons/">Mage of the Dungeons</a>
+            <a href = "https://magejets.github.io/WSODL/">WSODL!</a>  
+        </div>
     </div>
-    <div id = "right">
-        <p>Check out the code on github at:</p>
-        <a href = "https://github.com/magejets/Mage-of-the-Dungeons">Mage of the Dungeons</p>
-    </div>
-    <script src ="code./levels.js"></script>
-    <script src ="code./platformer.js"></script>
-</body>
+</div>
+<div class="centered" align="center">
+    <p>Mage Games</p>
+    <br></br>
+    <h1>Mage of the Dungeons</h1>
+    <canvas id="canvas" style="background:#a9a9a9" width="480" height="360">Your Browser Does Not Support The Canvas Element</canvas>
+    <p>Use the arrow keys to move, and the space key to shoot spells.</p>
+
+</div>
+<footer>
+    <div class="left-foot-column" align="left">
+        <a href="https://magejets.github.io/Games/" align="left"><img src="logo.png" width="100" height="66"></a>
+        <h2>Mage Games</h2>
+        <h3>A Mage J. Lewis Company</h3>
+        <a href="https://magejets.github.io/About/">About</a>
+        <br></br>
+        <a href="https://github.com/magejets">Github</a>
+        <p>&#169 2020 Mage J. Lewis</p>
+        
+</footer>
+<script src="code/levels.js"></script>
+<script src="code/platformer.js"></script>
+
     
+
+</body>
 </html>
