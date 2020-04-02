@@ -10,7 +10,7 @@ var ctx = canvas.getContext("2d");
 var up = false;
 var right = false;
 var left = false;
-var space = false;
+var space = false; /*Actually the s key. Space makes it scroll*/
 
 //How fast the player is traveling in the y direction
 var speedY = 0;
@@ -72,7 +72,7 @@ function keyDownHandler(e){
     if(e.key == "Left" || e.key == "ArrowLeft" || e.key == "a"){
         left = true;
     }
-    if(e.key == " "){
+    if(e.key == "s"){
         space = true;
     }
 }
@@ -86,7 +86,7 @@ function keyUpHandler(e){
     if(e.key == "Left" || e.key == "ArrowLeft" || e.key == "a"){
         left = false;
     }
-    if(e.key == " " /*space bar*/){
+    if(e.key == "s"){
         space = false;
     }
 }
